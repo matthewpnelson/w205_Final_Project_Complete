@@ -72,34 +72,34 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/slackbot_static/bike_stations';
 
-DROP TABLE evictions;
-
-CREATE EXTERNAL TABLE evictions
-(
-eviction_id string,
-address string,
-city string,
-state string,
-eviction_notice_source_zipcode string,
-file_date string,
-non_payment string,
-breach string,
-nuisance string,
-illegal_use string,
-failure_to_sign_renewal string,
-access_denial string,
-unapproved_subtenant string,
-owner_move_in string,
-demolition string,
-capital_improvement string,
-substantial_rehab string
-)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-FIELDS ESCAPED BY '\\'
-LINES TERMINATED BY '\n'
-STORED AS TEXTFILE
-LOCATION '/user/w205/slackbot_static/evictions';
+-- DROP TABLE evictions;
+--
+-- CREATE EXTERNAL TABLE evictions
+-- (
+-- eviction_id string,
+-- address string,
+-- city string,
+-- state string,
+-- eviction_notice_source_zipcode string,
+-- file_date string,
+-- non_payment string,
+-- breach string,
+-- nuisance string,
+-- illegal_use string,
+-- failure_to_sign_renewal string,
+-- access_denial string,
+-- unapproved_subtenant string,
+-- owner_move_in string,
+-- demolition string,
+-- capital_improvement string,
+-- substantial_rehab string
+-- )
+-- ROW FORMAT DELIMITED
+-- FIELDS TERMINATED BY ','
+-- FIELDS ESCAPED BY '\\'
+-- LINES TERMINATED BY '\n'
+-- STORED AS TEXTFILE
+-- LOCATION '/user/w205/slackbot_static/evictions';
 
 DROP TABLE fires;
 

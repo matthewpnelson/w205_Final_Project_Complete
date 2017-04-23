@@ -56,11 +56,13 @@ pip install python-craigslist --upgrade
 pip install slackclient
 
 
-
 # download all static data, load data lake
 cd /home/w205/w205_Final_Project_Complete/initialize/
 chmod +x slackbot_load_data_lake.sh
-./slackbot_load_data_lake.sh
+# change to w205 user
+su - w205
+./home/w205/w205_Final_Project_Complete/initialize/slackbot_load_data_lake.sh
+exit
 
 # Run Hive DDL Statements to build static data tables
 chmod +x slackbot_hive_base_ddl.sql
@@ -71,6 +73,3 @@ hive -f slackbot_hive_base_ddl.sql
 
 # run ranking scripts on some Hive Tables in Spark-SQL NOT FINISHED
 #cd /data/spark15/bin/
-
-# change to w205 user
-su - w205

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+su - w205
 # save my current directory
 MY_CWD=$(pwd)
 
