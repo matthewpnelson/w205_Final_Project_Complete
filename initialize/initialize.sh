@@ -65,8 +65,8 @@ su - w205
 exit
 
 # Run Hive DDL Statements to build static data tables
-chmod +x slackbot_hive_base_ddl.sql
-hive -f slackbot_hive_base_ddl.sql
+chmod +x /home/w205/w205_Final_Project_Complete/initialize/slackbot_hive_base_ddl.sql
+hive -f /home/w205/w205_Final_Project_Complete/initialize/slackbot_hive_base_ddl.sql
 
 # Run Spark to see if the Hive tables are there & Spark is synced up
 ##./data/spark15/bin/spark-sql
