@@ -6,7 +6,7 @@ __location__ = os.path.realpath(
 
 
 # Function to Take a list of latlong polygons with associated zip codes and turn into a dictionary with key = zipcode
-def import_zip_polygons(filename = '/home/w205/w205_finalproject_mattsandbox/evaluation1/San_Francisco_ZIP_Codes.csv'):
+def import_zip_polygons(filename = '/home/w205/w205_Final_Project_Complete/evaluation1/San_Francisco_ZIP_Codes.csv'):
     import csv
     with open(filename, 'rt') as fin:
     # with open(os.path.join(__location__, filename),'rt') as fin:

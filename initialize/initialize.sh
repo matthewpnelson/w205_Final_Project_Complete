@@ -6,6 +6,9 @@ cd
 ./start_hadoop.sh
 /data/start_postgres.sh
 
+#start Hive Metastore
+/data/start_metastore.sh
+
 # Set up Spark
 cd /home/w205/w205_Final_Project_Complete/initialize/
 chmod +x spark_setup.sh
