@@ -4,12 +4,13 @@ Berkeley MIDS w205 Final Project - SF Housing Slackbot
 
 To Run Slackbot:
 
-##### 
+###### ENVIRONMENT SETUP IN ROOT #########
+###### SLOW BECAUSE VERSION SWITCH-OUTS########
+
 # Launch an instance of UCB W205 Spring 2016 & attach an EBS volume
 
-# Build /data folder
-cd
-mkdir /data
+# Attach class /data folder
+mount -t ext4 /dev/xvdf /data
 chmod a+rwx /data
 
 # Setup Systems
@@ -17,21 +18,20 @@ wget https://s3.amazonaws.com/ucbdatasciencew205/setup_ucb_complete_plus_postgre
 chmod +x ./setup_ucb_complete_plus_postgres.sh
 
 #./setup_ucb_complete_plus_postgres.sh <*the device path to EBS volume*>
-./setup_ucb_complete_plus_postgres.sh /dev/xvdb
+./setup_ucb_complete_plus_postgres.sh /dev/xvdf
 
-
-##### 
 # Clone Github repo to /data
-cd /home/w205
 git clone https://github.com/matthewpnelson/w205_Final_Project_Complete.git
 
-
-##### 
 # Run Init Script
-cd /home/w205/w205_Final_Project_Complete/initialize/
+cd w205_Final_Project_Complete/initialize/
 chmod +x initialize.sh
 ./initialize.sh
 
+######### ENVIRONMENT SETUP SWITCHES YOU TO USER W205##########
+
+# Clone Github repo to user /w205
+git clone https://github.com/matthewpnelson/w205_Final_Project_Complete.git
 
 ##### 
 # Start Scraper
