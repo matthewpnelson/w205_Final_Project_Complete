@@ -21,7 +21,14 @@ def check_rentals(results,
                     density_of_SFPD_Incidents = "High",
                     density_of_trees = "Low",
                     density_of_schools = "Low"):
-
+    print(max_rent,
+    min_rent,
+    close_to_bike_parking,
+    close_to_bike_station,
+    density_of_offstreet_parking,
+    density_of_SFPD_Incidents,
+    density_of_trees,
+    density_of_schools)
     '''Script used to filter all craigslist rentals according to user preferences.
 
     User Preferences are set as defaults where the filter will no longer be applied:
