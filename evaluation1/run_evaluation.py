@@ -22,21 +22,21 @@
 
 # Pulling Inputs from .txt file stored by slackbot
 with open('/home/w205/w205_Final_Project_Complete/slackbot/sfhomebot.txt', 'rt') as fin:
-    max_rent = fin.readlines(1)[0]
+    max_rent = fin.readlines(2)[0]
     max_rent = int(max_rent.strip('\n'))
-    min_rent = fin.readlines(2)[0]
+    min_rent = fin.readlines(3)[0]
     min_rent = int(min_rent.strip('\n'))
-    close_to_bike_parking = fin.readlines(3)[0]
+    close_to_bike_parking = fin.readlines(4)[0]
     close_to_bike_parking = close_to_bike_parking.strip('\n')
-    close_to_bike_station = fin.readlines(4)[0]
+    close_to_bike_station = fin.readlines(5)[0]
     close_to_bike_station = close_to_bike_station.strip('\n')
-    density_of_offstreet_parking = fin.readlines(5)[0]
+    density_of_offstreet_parking = fin.readlines(6)[0]
     density_of_offstreet_parking = density_of_offstreet_parking.strip('\n')
-    density_of_schools = fin.readlines(6)[0]
+    density_of_schools = fin.readlines(7)[0]
     density_of_schools = density_of_schools.strip('\n')
-    density_of_trees = fin.readlines(7)[0]
+    density_of_trees = fin.readlines(8)[0]
     density_of_trees = density_of_trees.strip('\n')
-    density_of_SFPD_Incidents = fin.readlines(8)[0]
+    density_of_SFPD_Incidents = fin.readlines(9)[0]
     density_of_SFPD_Incidents = density_of_SFPD_Incidents.strip('\n')
 
 

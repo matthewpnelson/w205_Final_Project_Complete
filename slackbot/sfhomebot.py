@@ -30,15 +30,15 @@ def handle_command(command, channel):
         response = "Min Rent Price?"
     elif command==3:
         response = "Close to Bike Parking? Yes or No"
-    elif command==3:
-        response = "Close to a Bike Station? Yes or No"
     elif command==4:
-        response = "Density of Offstreet Parking Near your Place? High, Medium, Low (Low if you don't care)."
+        response = "Close to a Bike Station? Yes or No"
     elif command==5:
-        response = "Density of Schools Near your Place? High, Medium, Low (Low if you don't care)."
+        response = "Density of Offstreet Parking Near your Place? High, Medium, Low (Low if you don't care)."
     elif command==6:
-        response = "Density of Trees Near your Place? High, Medium, Low (Low if you don't care)."
+        response = "Density of Schools Near your Place? High, Medium, Low (Low if you don't care)."
     elif command==7:
+        response = "Density of Trees Near your Place? High, Medium, Low (Low if you don't care)."
+    elif command==8:
         response = "Density of SFPD Incidents Near your Place? High, Medium, Low (High if you don't care)."
     else:
         response = "That's all the questions I have for you, check back in a few minutes as I begin my search."
