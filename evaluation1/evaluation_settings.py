@@ -3,7 +3,7 @@ import os
 ## System settings
 
 # Which slack channel to post the listings into.
-SLACK_CHANNEL = "#playground"
+SLACK_CHANNEL = "#sf_housing"
 
 # The token that allows us to connect to slack.
 # Should be put in private.py, or set as an environment variable.
