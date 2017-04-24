@@ -6,13 +6,13 @@ from slackclient import SlackClient
 # 0,1,2,3,4,5,6,7,8,9,10 * * * * /home/w205/w205_Final_Project_Complete/slackbot/chronjob.sh >/dev/null
 
 # starterbot's ID as an environment variable
-BOT_ID = os.getenv("BOT_ID")
+BOT_ID = os.getenv("BOT_ID", "")
 
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN'))
+slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN', ""))
 
 #counter as global variable
 command_count=0
