@@ -24,9 +24,9 @@
 with open('/home/w205/w205_Final_Project_Complete/slackbot/sfhomebot.txt', 'rt') as fin:
     intro = fin.readline()[0]
     max_rent = fin.readline()[0]
-    max_rent = int(max_rent.strip('\n'))
+    max_rent = max_rent.strip('\n')
     min_rent = fin.readline()[0]
-    min_rent = int(min_rent.strip('\n'))
+    min_rent = min_rent.strip('\n')
     close_to_bike_parking = fin.readline()[0]
     close_to_bike_parking = close_to_bike_parking.strip('\n').title()
     close_to_bike_station = fin.readline()[0]
