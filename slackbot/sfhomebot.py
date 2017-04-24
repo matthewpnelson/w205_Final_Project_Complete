@@ -41,7 +41,7 @@ def handle_command(command, channel):
     elif command==7:
         response = "Density of SFPD Incidents Near your Place? High, Medium, Low (High if you don't care)."
     else:
-        response = "Not sure what you mean."
+        response = "That's all the questions I have for you, check back in a few minutes as I begin my search."
 
     slack_client.api_call("chat.postMessage", channel=channel,
                     text=response, as_user=True)
