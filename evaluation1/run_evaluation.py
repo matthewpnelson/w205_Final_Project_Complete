@@ -1,3 +1,4 @@
+#!/usr/bin/
 
 # SAMPLE INPUTS FROM USER
 # max_rent= 3000
