@@ -92,12 +92,12 @@ def check_rentals(results,
         #-----------------------------------------------------------------------------------------------
 
         # MAX PRICE
-        print("MAx PRICE FILTER")
+        print("MAX PRICE FILTER")
         if max_rent == None:
             pass
         else:
             try:
-                if int(result['price'].replace("$","")) > max_rent:
+                if int(result['price'].replace("$","")) > int(max_rent):
                     continue #doesn't meet user criteria, go on to next result
             except:
                 continue
@@ -108,7 +108,7 @@ def check_rentals(results,
             pass
         else:
             try:
-                if int(result['price'].replace("$","")) < min_rent:
+                if int(result['price'].replace("$","")) < int(min_rent):
                     continue #doesn't meet user criteria, go on to next result
             except:
                 continue
