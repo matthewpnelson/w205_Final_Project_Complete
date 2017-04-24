@@ -84,6 +84,7 @@ def check_rentals(results,
         #-----------------------------------------------------------------------------------------------
 
         # MAX PRICE
+        print("MAx PRICE FILTER")
         if max_rent == None:
             pass
         else:
@@ -94,6 +95,7 @@ def check_rentals(results,
                 continue
 
         # MIN PRICE
+        print("MIN PRICE FILTER")
         if min_rent == None:
             pass
         else:
