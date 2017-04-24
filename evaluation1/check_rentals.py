@@ -63,6 +63,7 @@ def check_rentals(results,
             if len(geotag) != 2:
                 continue
         else:
+            print("Hit ELSE at geotag")
             continue #skip for now because there is no geotag
 
         # Look up zipcode using geotag
