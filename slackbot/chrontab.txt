@@ -1,1 +1,1 @@
-* * * * * /bin/sh ./home/w205/w205_Final_Project_Complete/slackbot/chronjob.sh
+0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/w205/w205_Final_Project_Complete/slackbot/chronjob.sh
