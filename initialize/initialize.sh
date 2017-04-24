@@ -8,8 +8,8 @@ cd
 
 # Set up Spark
 cd /home/w205/w205_Final_Project_Complete/initialize/
-chmod +x setup_spark.sh
-bash ./setup_spark.sh
+chmod +x spark_setup.sh
+./spark_setup.sh
 
 # Set up PATH variables for SPARK
 export SPARK=/data/spark15
@@ -54,6 +54,7 @@ pip install python-craigslist --upgrade
 
 # Manually Install Slackclient as root user
 pip install slackclient
+
 
 
 # download all static data, load data lake
