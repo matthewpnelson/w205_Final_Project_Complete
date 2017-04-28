@@ -25,10 +25,6 @@ export PATH=$SPARK/bin:$PATH
 
 
 ## Install and set up Python 2.7 and PIP 2.7 (needed for SlackClient)
-#SSL and certificate setup before updating Python
-sudo yum install gcc libffi-devel python-devel openssl-devel
-pip install cryptography
-pip install urllib3[secure]
 # install build tools
 sudo yum install make automake gcc gcc-c++ kernel-devel git-core -y
 # install python 2.7 and change default python symlink
@@ -54,6 +50,10 @@ easy_install-2.7 pip
 sudo pip install virtualenv
 # should display current versions:
 pip -V && virtualenv --version
+#SSL and certificate setup before updating Python
+sudo yum install gcc libffi-devel python-devel openssl-devel
+pip install cryptography
+pip install urllib3[secure]
 
 
 # Manually Install Craigslist Scraper as root user

@@ -25,8 +25,9 @@ git clone https://github.com/matthewpnelson/w205_Final_Project_Complete.git
 
 # Run Init Script
 cd w205_Final_Project_Complete/initialize/
-chmod +x initialize.sh
-./initialize.sh
+chmod +x initialize2.sh
+./initialize2.sh
+# Answer prompt to download Y for fixing certificate issues
 
 ######### ENVIRONMENT SETUP SWITCHES YOU TO USER W205##########
 
@@ -40,17 +41,27 @@ cd /home/w205/w205_Final_Project_Complete/scraper/
 chmod +x start_scraper.sh
 ./start_scraper.sh
 
+######OPEN A NEW SESSION#####
+sudo yum install gcc libffi-devel python-devel openssl-devel
+pip install cryptography
+pip install urllib3[secure]
+# python -- version should be Python 2.7
+[root@ip-172-31-0-146 initialize]# chmod +x spark_setup.sh
+[root@ip-172-31-0-146 initialize]# ./spark_setup.sh
+[root@ip-172-31-0-146 initialize]# export SPARK=/data/spark15
+[root@ip-172-31-0-146 initialize]# export SPARK_HOME=$SPARK
+[root@ip-172-31-0-146 initialize]# export PATH=$SPARK/bin:$PATH
+[root@ip-172-31-0-146 initialize]# /data/start_metastore.sh
 
-#####
+#### SWITCH USERS#### 
+# Start Slackbot
+su - w205
+cd w205_Final_Project_Complete/slackbot
+chmod +x chronjob.sh
 # Set Slack Tokens as Environment Variables 
 export SLACK_TOKEN=' ' 
 export BOT_ID=' ' 
-export SLACK_BOT_TOKEN=' ' 
-
-
-#####
-# Start Slackbot
-chmod +x chronjob.sh
+export SLACK_BOT_TOKEN=' '
 0,1,2,3,4,5,6,7,8,9,10 * * * * /home/w205/w205_Final_Project_Complete/slackbot/chronjob.sh >/dev/null
 python sfhomebot.py
 
