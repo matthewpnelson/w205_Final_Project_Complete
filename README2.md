@@ -66,6 +66,11 @@ pip install urllib3[secure]
 # Start Slackbot
 su - w205
 cd w205_Final_Project_Complete/slackbot
+<<<<<<< HEAD
+=======
+crontab -e
+
+>>>>>>> parent of 1d2946b... new
 chmod +x chronjob.sh
 # Set Slack Tokens as Environment Variables 
 export SLACK_TOKEN=' ' 
