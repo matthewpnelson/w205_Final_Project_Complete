@@ -28,11 +28,20 @@ cd w205_Final_Project_Complete/initialize/
 chmod +x initialize2.sh
 ./initialize2.sh
 # Answer prompt to download Y for fixing certificate issues
+#SSL and certificate setup before updating Python
+sudo yum install gcc libffi-devel python-devel openssl-devel
+pip install cryptography
+pip install urllib3[secure]
 
 ######### ENVIRONMENT SETUP SWITCHES YOU TO USER W205##########
 
 # Clone Github repo to user /w205
 git clone https://github.com/matthewpnelson/w205_Final_Project_Complete.git
+
+# Set up PATH variables for SPARK
+export SPARK=/data/spark15
+export SPARK_HOME=$SPARK
+export PATH=$SPARK/bin:$PATH
 
 ##### 
 # Start Scraper
