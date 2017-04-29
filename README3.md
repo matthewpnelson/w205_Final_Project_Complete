@@ -66,8 +66,11 @@ chmod +x spark_setup.sh
 export SPARK=/data/spark15
 export SPARK_HOME=$SPARK
 export PATH=$SPARK/bin:$PATH
+
+cd
 /data/start_metastore.sh
 enter
+
 
 #### SWITCH USERS#### 
 
@@ -77,12 +80,12 @@ cd w205_Final_Project_Complete/slackbot
 ### Make cronjob ###
 crontab -e
 press 'o' to edit
-insert: * * * * * /home/w205/w205_Final_Project_Complete/slackbot/chronjob.sh
+insert: * * * * * /home/w205/w205_Final_Project_Complete/slackbot/chronjob3.sh
 press esc
 :wq
 
 ### Start Slackbot ###
-chmod +x chronjob2.sh
+chmod +x chronjob3.sh
 # Set Slack Tokens as Environment Variables 
 export SLACK_TOKEN=' ' 
 export BOT_ID=' ' 
