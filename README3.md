@@ -32,11 +32,13 @@ chmod +x initialize2.sh
 ######### ENVIRONMENT SETUP SWITCHES YOU TO USER W205##########
 
 exit
+cd
 
-#SSL and certificate setup before updating Python
+#SSL and certificate setup for Python 2.7
 sudo yum install gcc libffi-devel python-devel openssl-devel
 pip install cryptography
 pip install urllib3[secure]
+# Answer prompt to download Y for fixing certificate issues
 
 su - w205
 
