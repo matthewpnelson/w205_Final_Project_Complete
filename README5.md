@@ -50,6 +50,28 @@ export SPARK=/data/spark15
 export SPARK_HOME=$SPARK
 export PATH=$SPARK/bin:$PATH
 
+which spark-submit should return path
+
+vi .bash_profile
+insert those 3 lines at the end
+esc
+:wq
+
+in terminal, execute . .bash_profile
+
+### Load Static Data ###
+wget  https://s3.amazonaws.com/ucbmids205-slackbot-static/slackbot_load_data_lake2.sh
+chmod +x slackbot_load_data_lake2.sh
+./slackbot_load_data_lake2.sh
+
+### DDL to Hive ###
+wget https://s3.amazonaws.com/ucbmids205-slackbot-static/slackbot_hive_base_ddl.sql
+chmod +x slackbot_hive_base_ddl.sql
+
+hive
+> source slackbot_hive_base_ddl.sql;
+> exit;
+
 ##### 
 # Start Scraper
 # Run start_scraper Script to begin active scraping (Pulls 50 entries from Craigslist every 20 mins) & saves to Hive
@@ -92,8 +114,29 @@ export BOT_ID=' '
 export SLACK_BOT_TOKEN=' '
 python sfhomebot.py
 
+### OPEN NEW SESSION ###
+su - w205
+cd w205_Final_Project_Complete/slackbot
+ls -l should show sfhomebot.txt
+# FOR BOT RESPONSE
+export SLACK_TOKEN=''
+# If CRON taking too long to reply, manually enter
+spark-submit /home/w205/w205_Final_Project_Complete/evaluation1/run_evaluation.py
+
+### Interact with Slackbot ###
+https://home-bot-team.slack.com/
+sfhomebot will come online once the sfhomebot.py comes online
+Start communicating with Slackbot by doing @sfhomebot
+Answer each question starting with @sfhomebot
+When bot says, "That's all the questions I have for you, check back in a few minutes as I begin my search." that is the end of the script.
+Open a new session
+su - w205
+cd w205_Final_Project_Complete/slackbot
+ls -l should now show sfhomebot.txt
+
 #####
 # Submit Queries to Slackbot via Slack Channel
+Cron should pick up .txt and reply to channel with results
 
 
 
