@@ -107,21 +107,12 @@ press esc
 :wq
 
 ### Start Slackbot ###
-chmod +x chronjob3.sh
+cd w205_Final_Project_Complete/slackbot
 # Set Slack Tokens as Environment Variables 
 export SLACK_TOKEN=' ' 
 export BOT_ID=' ' 
 export SLACK_BOT_TOKEN=' '
 python sfhomebot.py
-
-### OPEN NEW SESSION ###
-su - w205
-cd w205_Final_Project_Complete/slackbot
-ls -l should show sfhomebot.txt
-# FOR BOT RESPONSE
-export SLACK_TOKEN=''
-# If CRON taking too long to reply, manually enter
-spark-submit /home/w205/w205_Final_Project_Complete/evaluation1/run_evaluation.py
 
 ### Interact with Slackbot ###
 https://home-bot-team.slack.com/
@@ -133,6 +124,14 @@ Open a new session
 su - w205
 cd w205_Final_Project_Complete/slackbot
 ls -l should now show sfhomebot.txt
+
+### OPEN NEW SESSION ###
+su - w205
+cd w205_Final_Project_Complete/slackbot
+# FOR BOT RESPONSE
+export SLACK_TOKEN=''
+# If CRON taking too long to reply, manually enter
+spark-submit /home/w205/w205_Final_Project_Complete/evaluation1/run_evaluation.py
 
 #####
 # Submit Queries to Slackbot via Slack Channel
